@@ -1,4 +1,4 @@
-/* Portions Copyright 2021 Xuesong Zhou
+/* Portions Copyright 2021 Xuesong Zhou and Peiheng Li
  *
  * If you help write or modify the code, please also list your names here.
  * The reason of having Copyright info here is to ensure all the modified version, as a whole, under the GPL
@@ -245,11 +245,14 @@ string g_time_coding(float time_stamp)
 {
     int hour = static_cast<int>(time_stamp / 60);
     int minute = static_cast<int>(time_stamp - hour * 60);
-    int second = static_cast<int>((time_stamp - hour * 60 - minute) * 60);
+    int second = static_cast<int>((time_stamp - hour * 60 - minute) * 60 + 0.02);
 
+    int sss = ((time_stamp - hour * 60 - minute) * 60 - second)*1000;
+
+    //mm:ss.sss
     ostringstream strm;
     strm.fill('0');
-    strm << std::setw(2) << hour << std::setw(2) << minute /*<< ":" << setw(2) << second*/;
+    strm << std::setw(2) << hour << std::setw(2) << minute << ":" << std::setw(2) << second << "." << std::setw(3) << sss;
 
     return strm.str();
 }
@@ -542,5 +545,29 @@ bool CCSVParser::GetValueByFieldName(string field_name, string& value, bool requ
 
         value = str_value;
         return true;
+    }
+}
+
+bool g_read_a_line(FILE* f)
+/* read a line from the current line from the file */
+{
+
+    char ch;
+
+    while (1) {
+        ch = getc(f);
+        if (ch != 13 && ch != 10 && ch != EOF)
+        {
+            // do nothing
+        }
+        else { /* terminate if it's end of line or end of file */
+            {
+                // do nothing
+            }
+            if (ch == EOF)
+                return false;
+
+            return true;
+        }
     }
 }
