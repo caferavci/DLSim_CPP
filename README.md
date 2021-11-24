@@ -2,7 +2,7 @@
 
 This repo is an **independent development** from [asu-trans-ai-lab/DTALite](https://github.com/asu-trans-ai-lab/DTALite) after [pull request #8](https://github.com/asu-trans-ai-lab/DTALite/pull/8). It aims to provide a clean and common C++ code base (over its original implementation) to build both executable and shared library of DTALite across platforms. As it still has legacy code which either does not represent the best practices or could be optimized for better performance, we have lanuched another project to further refactor it using modern C++ (mainly C++11 and C++14) in a private repo [DTALite_Refactoring](https://github.com/jdlph/DTALite_Refactoring). It will be made public once it is mature.
 
-The development of DLSIM in Python has been halted and partially merged with [Path4GMNS](https://github.com/jdlph/Path4GMNS)(which originates from the same sorce code). It will be resumed in the future when Path4GMNS is fully implemented.
+The development of DLSIM in Python has been halted and partially merged with [Path4GMNS](https://github.com/jdlph/Path4GMNS)(which originates from the same sorce code). 
 
 The legacy source and binary files are all deprecated and moved to the [archive folder](https://github.com/jdlph/DTALite/tree/main/archive) for referrence only.
 
@@ -54,9 +54,9 @@ A classic Visual Studio solution file is shipped as well along with the project 
 [C++ source code](https://github.com/caferavci/DLSim_CPP/src_cpp/src)
 
 ### Other References: 
-**1. Trajectory optimization
+**1. Trajectory optimization**
 
-*Wei, Y., Avcı, C., Liu, J., Belezamo, B., Aydın, N., Li, P. T., & Zhou, X. (2017). Dynamic programming-based multi-vehicle longitudinal trajectory optimization with simplified car following models. Transportation research part B: methodological, 106, 102-129.
+*Wei, Y., Avcı, C., Liu, J., Belezamo, B., Aydın, N., Li, P. T., & Zhou, X. (2017). Dynamic programming-based multi-vehicle longitudinal trajectory optimization with simplified car following models. Transportation research part B: methodological, 106, 102-129.*
 
 
 **2. Parallel computing algorithms**
