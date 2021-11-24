@@ -53,6 +53,9 @@ A classic Visual Studio solution file is shipped as well along with the project 
 
 [C++ source code](https://github.com/caferavci/DLSim_CPP/src_cpp/src)
 
+### Step 4: Sample Simulation of Diverging Diamond Interchange (DDI)
+[Sample Simulation](https://youtu.be/St0xq4CQfeQ):We would like to show the an example of real-world DDI simulation.
+
 ### Other References: 
 **1. Trajectory optimization**
 
